@@ -701,14 +701,14 @@ function sealClick(el){
   const r=el.getBoundingClientRect();
   burstHearts(r.left+r.width/2,r.top+r.height/2,18);
   launchConfetti(90,r.left+r.width/2,r.top);
-  showToast('🌹 Sachith loves you more than words can say, Manikh 💕');
+  showToast('🌹 I love you more than words can say, Manikh 💕');
 }
 
 /* ════ BIRTHDAY BURST ════ */
 function bdayBurst(){
   launchConfetti(260);
   for(let i=0;i<8;i++)setTimeout(()=>burstHearts(Math.random()*cfW,Math.random()*cfH*0.6,12),i*150);
-  showToast('🎂 Happy Birthday, Dulasha! Sachith loves you so much 🌹');
+  showToast('🎂 Happy Birthday, Dulasha! I love you so much 🌹');
 }
 
 /* ════ FOOTER HEART ════ */
@@ -716,14 +716,14 @@ function heartClick(el){
   const r=el.getBoundingClientRect();
   burstHearts(r.left+r.width/2,r.top+r.height/2,22);
   launchConfetti(130,r.left+r.width/2,r.top);
-  showToast('💖 Always yours, my Manikh 🌸');
+  showToast('💖 Always yours, Manikh 🌸');
 }
 
 /* ════ TOUCH HEARTS ════ */
 document.addEventListener('touchstart',e=>{burstHearts(e.touches[0].clientX,e.touches[0].clientY,6);},{passive:true});
 
 /* ════ SCROLL REVEALS + TOASTS ════ */
-const toastMap={letter:'💌 A letter written for you by Sachith, Dulasha...',photos:'🌸 Every memory with Manikh is precious',story:'💕 The story of Sachith & Dulasha — the best one ever told',reasons:'✨ There are so many more reasons, Manikh...','bday-wish':'🎂 One last thing, birthday girl...'};
+const toastMap={letter:'💌 A letter written for you..',photos:'🌸 Every memory with you is precious',story:'💕 Our Story — the best one ever told',reasons:'✨ There are so many more reasons, Manikh...','bday-wish':'🎂 One last thing, birthday girl...'};
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
